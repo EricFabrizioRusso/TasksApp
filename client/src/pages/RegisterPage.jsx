@@ -11,7 +11,7 @@ const RegisterPage = () => {
     }}= useForm();
     const {isAuthenticated,signup, AuthError}= useAuth();
     const navigate= useNavigate();
-    const params= useParams();
+    //const params= useParams();
 
 
     useEffect(() => {

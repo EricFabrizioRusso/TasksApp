@@ -1,6 +1,9 @@
 import React from 'react'
 import { useTasks } from '../context/TasksContext'
 import { Link } from 'react-router-dom';
+import dayjs from 'dayjs';
+import utc from 'dayjs/plugin/utc';
+dayjs.extend(utc);
 
 const TaskCard = ({task}) => {
 
@@ -15,8 +18,9 @@ const TaskCard = ({task}) => {
             </div>
             <Link to={`/tasks/${task._id}`}>Edit</Link>
         </header>
-        <p>{task.description}</p>
-        <p>{new Date(task.date).toLocaleDateString()}</p>
+        <p>
+          {dayjs(task.date).utc().format('DD/MM/YYYY')}
+        </p>
     </div>
   )
 }

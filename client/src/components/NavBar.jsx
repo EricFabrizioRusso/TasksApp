@@ -10,7 +10,7 @@ const NavBar = () => {
 
   return (
     <nav className='bg-dark p-4 d-flex justify-content-between'>
-        <Link to='/'>
+        <Link to={isAuthenticated ? '/tasks' : '/'}>
           <h1>Tasks Manager</h1>
         </Link>
     
