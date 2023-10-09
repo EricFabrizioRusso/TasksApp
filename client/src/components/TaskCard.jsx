@@ -18,6 +18,7 @@ const TaskCard = ({task}) => {
             </div>
             <Link to={`/tasks/${task._id}`}>Edit</Link>
         </header>
+        <p>{task.description}</p>
         <p>
           {dayjs(task.date).utc().format('DD/MM/YYYY')}
         </p>

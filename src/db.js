@@ -1,8 +1,6 @@
 import mongoose from "mongoose";
 import { MONGODB_URI } from "./config.js";
 
-const pw='6QgactpItROjwM8O';
-
 export const connectDb= async()=>{
 
 
