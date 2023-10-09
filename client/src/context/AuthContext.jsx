@@ -31,13 +31,13 @@ export const AuthProvider =({children})=>{
 
         
                 setAuthError([res.json.errmessage])
-                console.log('Error');
+  
                 return;
              
             }
             setUser(res.json);
             setIsAuthenticated(true);
-            console.log('registrado');
+     
         }catch(err){
 
 
@@ -59,7 +59,6 @@ export const AuthProvider =({children})=>{
 
         
                 setAuthError([res.json.errmessage])
-                console.log('Error');
                 return;
              
             }
@@ -87,18 +86,16 @@ export const AuthProvider =({children})=>{
 
 
             const cookies= Cookies.get();
-            console.log(cookies);
             if(!cookies.token){
                 setIsAuthenticated(false);
                 setloading(false);
-                console.log("entra al !cookies")
+                //console.log("entra al !cookies")
                 return;
             }
 
             try{
 
                 const res= await  verifyTokenRequest(cookies);
-                //console.log(res.json," <-- AuthContext Cookie");
                 setIsAuthenticated(true);
                 setUser(res.json);
                 setloading(false);

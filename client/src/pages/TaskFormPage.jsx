@@ -22,10 +22,9 @@ const TaskFormPage = () => {
       if(params.id){
   
         const task= await getTask(params.id);
-        console.log(task);
         setValue('title',task.title);
         setValue('description', task.description);
-        setValue('date',dayjs(task.date).utc().format('YYY-MM-DD'));
+        setValue('date',dayjs(task.date).utc().format('YYYY-MM-DD'));
       }
 
     }
@@ -36,20 +35,22 @@ const TaskFormPage = () => {
 
   const onSubmit= handleSubmit((data)=>{
 
+    console.log(data, 'DATA')
+
     const dataValid ={
       ...data,
       date: data.date ? dayjs.utc(data.date).format() : dayjs.utc().format(),
 
     }
+    console.log(dataValid);
 
     if(params.id){
 
-      //updateTask(params.id,data);
+ 
       updateTask(params.id,dataValid);
 
     }else{
 
-      //createTask(data);
       createTask(dataValid);
 
     }

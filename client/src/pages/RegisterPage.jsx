@@ -11,7 +11,6 @@ const RegisterPage = () => {
     }}= useForm();
     const {isAuthenticated,signup, AuthError}= useAuth();
     const navigate= useNavigate();
-    //const params= useParams();
 
 
     useEffect(() => {
@@ -36,19 +35,6 @@ const RegisterPage = () => {
       await signup(values)
     })
   
-
-  /*return (
-    <div className='m-5 text-center'>
-        <form onSubmit={handleSubmit((values)=> postData(values))}>
-            <input className='m-1 border-primary' type='text' {...register('username', {required: true})}/>
-            <input className='m-1' type='email' {...register('email', {required: true})}/>
-            <input className='m-1' type='password' {...register('password', {required: true})}/>
-            <button className='m-1' type='submit'>
-                Register
-            </button>
-        </form>
-    </div>
-  )*/
   return (
     <div className='m-5 p-4 text-center bg-dark'>
       <h1 className='text-light fw-bold mb-5'>Register</h1>

@@ -3,7 +3,7 @@ const url= 'http://localhost:3000/api'
 
 export const postData=async(values)=>{
 
-    console.log(url)
+   
     try{
         const res= await fetch(`${url}/register`,{
             method: 'POST',
@@ -33,7 +33,7 @@ export const postData=async(values)=>{
 }
 export const loginData=async(values)=>{
 
-    console.log(url)
+   
     try{
         const res= await fetch(`${url}/login`,{
             method: 'POST',
