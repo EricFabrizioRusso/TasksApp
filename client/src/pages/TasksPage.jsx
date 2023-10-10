@@ -21,12 +21,18 @@ const TasksPage = () => {
   } 
   return (
     <div>
-    { 
-    
-
+    { tasks.length === 0 ?  (
       tasks.map((el)=>(
          <TaskCard key={el._id} task={el}/>
       ))
+
+    ):(
+
+        <h1>No task</h1>
+
+    )
+    
+
         
      
 
