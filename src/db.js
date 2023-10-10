@@ -8,7 +8,8 @@ export const connectDb= async()=>{
 
      //await mongoose.connect(`mongodb+srv://russito:${pw}@cluster-eric.mgj8jzn.mongodb.net/`);
      await mongoose.connect(MONGODB_URI);
-        console.log(">>> DB is connected");
+        console.log(">>> DB is connected " + MONGODB_URI);
+       
 
     }catch(err){
 

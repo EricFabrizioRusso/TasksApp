@@ -1,6 +1,10 @@
 const pw='6QgactpItROjwM8O';
 export const PORT = process.env.PORT || 3000;
 
+export const MONGOUSER= process.env.MONGOUSER || 'root'
+
+export const MONGOPASSWORD= process.env.MONGOPASSWORD || '6QgactpItROjwM8O'
+
 export const MONGODB_URI = process.env.MONGODB_URI || `mongodb+srv://russito:${pw}@cluster-eric.mgj8jzn.mongodb.net/`;
 
 export const TOKEN_SECRET = process.env.TOKEN_SECRET || "secret";
