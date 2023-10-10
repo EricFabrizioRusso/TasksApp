@@ -1,5 +1,6 @@
 
-const url= 'http://localhost:3000/api'
+//const url= 'http://localhost:3000/api'
+const url= 'https://tasksapp-production-0d49.up.railway.app/api'
 
 export const postData=async(values)=>{
 
