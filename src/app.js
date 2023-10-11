@@ -9,9 +9,9 @@ import { FRONTEND_URL } from './config.js';
 const app= express();
 
 app.use(cors({
-
+     //origin:'https://ubiquitous-sunshine-da4d8b.netlify.app/',
     origin: 'http://localhost:5173',
-   // origin: FRONTEND_URL,
+    origin: FRONTEND_URL,
     credentials: true,
 })
     
