@@ -13,7 +13,7 @@ export const createAccesToken=(payload)=>{
             },
             (err,token)=>{
                 if(err) reject(err);
-                console.log(err);
+                console.log(err, 'Este es el error al crear el token');
                 resolve(token);
             }
         )
