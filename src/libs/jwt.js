@@ -9,7 +9,7 @@ export const createAccesToken=(payload)=>{
             payload,
             TOKEN_SECRET,
             {
-                expiresIn: '1d',
+                expiresIn: "10h",
             },
             (err,token)=>{
               
