@@ -12,7 +12,7 @@ export const createAccesToken=(payload)=>{
                 expiresIn: '1d',
             },
             (err,token)=>{
-                console.log(err, 'Este es el error al crear el token');
+              
                 if(err) reject(err);
                 resolve(token);
             }

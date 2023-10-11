@@ -19,18 +19,17 @@ const TasksPage = () => {
     return <h1 className='text-light text-center fs-2'>{tasks.message}</h1>
     
   } 
+
+  if(tasks.length=== 0) return <h1>No tasks found</h1>
   return (
     <div>
-    { tasks.length === 0 ?  (
+    { 
+     
       tasks.map((el)=>(
          <TaskCard key={el._id} task={el}/>
       ))
 
-    ):(
-
-        <h1>No task</h1>
-
-    )
+    
     
 
         

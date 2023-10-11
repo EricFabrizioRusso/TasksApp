@@ -7,7 +7,8 @@ export const getTasks= async(req,res)=>{
     
             user: req.user.id
         }).populate('user');
-       
+
+       console.log(tasks,'Estas son las tareas del usuario');
         if(tasks.length === 0) return res.status(408).json({message: 'There is not task for this user'});
         res.json(tasks)
 

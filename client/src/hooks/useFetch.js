@@ -16,7 +16,7 @@ export const postData=async(values)=>{
         })
         
         const json= await res.json();
-        //console.log(json);
+        console.log(json);
    
 
         return{json};
