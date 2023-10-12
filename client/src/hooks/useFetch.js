@@ -12,7 +12,7 @@ export const postData=async(values)=>{
             headers: {
             'Content-Type': 'application/json'
             },
-            body: JSON.stringify({values}),
+            body: JSON.stringify(values),
         })
         
         const json= await res.json();
@@ -69,9 +69,9 @@ export const verifyTokenRequest= async(value)=>{
             credentials:'include',
             headers:{
                 'Content-Type': 'application/json',
-                'Cookie': document.cookie
+                //'Cookie': document.cookie
             },
-            body: JSON.stringify({value}),
+            body: JSON.stringify(value),
         });
         
         const json=await res.json();

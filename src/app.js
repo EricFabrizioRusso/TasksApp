@@ -9,10 +9,8 @@ import { FRONTEND_URL } from './config.js';
 const app= express();
 
 app.use(cors({
-    //origin:'https://taskapp-frontend-production.up.railway.app',
-    origin:'https://tasksapp-production-0d49.up.railway.app',
+    origin:'https://taskapp-frontend-production.up.railway.app',
     //origin: 'http://localhost:5173',
-    //origin: FRONTEND_URL,
     credentials: true,
     
 })
