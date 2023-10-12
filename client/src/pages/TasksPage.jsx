@@ -16,6 +16,7 @@ const TasksPage = () => {
   useEffect(() => {
 
     console.log('se renderiza')
+    getTasks();
   }, [tasks]);
 
 

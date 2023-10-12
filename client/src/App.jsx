@@ -19,12 +19,11 @@ function App() {
       <h1 className='bg-primary text-light p-3 text-center m-3'>Mi app TodoApp</h1>
       <AuthProvider>
         <TaskProvider>
-          <BrowserRouter>
+          <HashRouter>
             <NavBar/>
               <Routes>
 
                   <Route path='/' element={<HomePage/>}/>
-                  <Route path='/test' element={<h1>Testenado haber si anda</h1>}/>
                   <Route path='/register' element={<RegisterPage/>}/>
                   <Route path='/login' element={<LoginPage/>}/>
 
@@ -37,7 +36,7 @@ function App() {
                     <Route path='/profile' element={<ProfilePage/>}/>
                   </Route>
               </Routes>
-          </BrowserRouter>
+          </HashRouter>
         </TaskProvider>
       </AuthProvider>
     </>
