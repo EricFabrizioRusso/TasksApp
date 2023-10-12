@@ -19,7 +19,7 @@ function App() {
       <h1 className='bg-primary text-light p-3 text-center m-3'>Mi app TodoApp</h1>
       <AuthProvider>
         <TaskProvider>
-          <HashRouter>
+          <BrowserRouter>
             <NavBar/>
               <Routes>
 
@@ -37,7 +37,7 @@ function App() {
                     <Route path='/profile' element={<ProfilePage/>}/>
                   </Route>
               </Routes>
-          </HashRouter>
+          </BrowserRouter>
         </TaskProvider>
       </AuthProvider>
     </>
