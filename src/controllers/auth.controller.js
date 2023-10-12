@@ -25,8 +25,9 @@ export const register= async (req,res) =>{
         })
         
         const userSaved=await newUser.save();
+        const expireTime = Math.floor(Date.now() / 1000) + 12 * 60 * 60;
         const token= await createAccesToken({id: userSaved._id})
-       const myCookie= res.cookie('token',token, { secure: true })
+       const myCookie= res.cookie('token',token,{ expires: new Date(expireTime * 1000) })
        console.log(myCookie, 'myCookie')
     
         res.json({
