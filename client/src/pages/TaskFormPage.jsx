@@ -59,8 +59,8 @@ const TaskFormPage = () => {
   });
 
   return (
-    <div className='m-5 text-center'>
-      <form onSubmit={onSubmit}>
+    <div className='text-center bg-dark m-5 p-4 loginPage rounded-2 m-auto mt-5'>
+      {/* <form onSubmit={onSubmit}>
           <label htmlFor="title">Title</label>
           <input className='m-1 border-primary' type='text'
            placeholder='Title'
@@ -78,6 +78,21 @@ const TaskFormPage = () => {
           <button className='m-1 p-1 bg-dark'>
             Save
           </button>
+      </form> */}
+      <form onSubmit={onSubmit}>
+        <div className="mb-3 text-light">
+          <label htmlFor="title" className="form-label fw-bold ">Title</label>
+          <input type="text" className="form-control" id="exampleInputUsername" placeholder='New Task' autoFocus {...register('title', {required: true})}/>
+        </div>
+        <div className="mb-3 text-light">
+          <label htmlFor="description" className="form-label fw-bold ">Description</label>
+          <textarea type="text" className="form-control" id="exampleInputEmail1" style={{height:'120px', resize:'none'}} placeholder='This is a short description'  {...register('description', {required: true})}></textarea>
+        </div>
+        <div className="mb-3 text-light">
+          <label htmlFor="date" className="form-label fw-bold ">Date</label>
+          <input type="date" className="form-control" id="exampleInputPassword1" {...register('date')}/>
+        </div>
+        <button className="btn btn-primary fs-4 m-2" style={{width:'150px'}}>Save</button>
       </form>
     </div>
   )

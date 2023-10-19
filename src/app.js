@@ -11,6 +11,7 @@ const app= express();
 app.use(cors({
     origin:'https://taskapp-frontend-production.up.railway.app',
     //origin: 'http://localhost:5173',
+    //origin: 'http://localhost:4173',
     credentials: true,
     
 })

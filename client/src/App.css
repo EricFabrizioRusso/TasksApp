@@ -1,3 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100;200;400&display=swap');
+/* ********** Custom Properties ********** */
+:root{
+    --first-color: rgb(49, 49, 49);
+    --second-color: rgb(97, 20, 221);
+    
+}
+/* ********** Reset Styles ********** */
 body{
     background: #202020;
+    background-image: radial-gradient(#333333 5px, transparent 5px);
+    background-size: 50px 50px;
 }
+
+
+/* ********** Bootstrap Styles ********** */
+.bg-dark{
+
+    background-color: var(--second-color) !important;
+}
+
+/* ********** Custom Properties ********** */
+
+.loginPage{
+
+    max-width: 500px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+.btn_img{
+    fill: red;
+}
+.taskCard{
+ 
+    width: 500px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.navBar{
+    max-width: 1500px;
+}
+  
+

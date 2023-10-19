@@ -71,10 +71,11 @@ export const verifyTokenRequest= async(value)=>{
                 'Content-Type': 'application/json',
                 //'Cookie': document.cookie
             },
-            body: JSON.stringify(value),
+            body: JSON.stringify({value}),
         });
         
         const json=await res.json();
+        console.log(json);
         
         return {json};
 

@@ -11,7 +11,7 @@ export const getTasksRequest= async () =>{
         });
         const json= await res.json();
         
-        console.log(json);
+        //console.log(json);
         return {json}
         
     }catch(error){

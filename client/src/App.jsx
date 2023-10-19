@@ -16,7 +16,7 @@ function App() {
 
   return (
     <>
-      <h1 className='bg-primary text-light p-3 text-center m-3'>Mi app TodoApp</h1>
+      {/* <h1 className='bg-primary text-light p-3 text-center m-3'>Mi app TodoApp</h1> */}
       <AuthProvider>
         <TaskProvider>
           <HashRouter>
