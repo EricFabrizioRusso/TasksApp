@@ -20,7 +20,7 @@ const TasksPage = () => {
   }, []);
 
 
-  if(tasks.message === 'There is not task for this user'){
+  if(tasks.message === 'No tasks for you'){
 
     return <h1 className='text-light text-center fs-1 mt-5'>{tasks.message}</h1>
     
