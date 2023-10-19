@@ -35,7 +35,7 @@ const LoginPage = () => {
 
           AuthError.map((error,index)=>(
 
-            <div className='bg-danger text-light m-2' key={index}>
+            <div className='text-light bg-danger rounded fs-6 p-2 m-2' key={index}>
               {error}
             </div>
 
@@ -61,7 +61,7 @@ const LoginPage = () => {
             <label htmlFor="exampleInputEmail1" className="form-label fw-bold m-4">Email address</label>
             <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" {...register('email', {required: true})}/>
             {
-              errors.email && <p className='text-danger '>Email is required</p>
+              errors.email && <p className='text-light bg-danger rounded fs-6 p-2 m-2'>Email is required</p>
             }
             <div id="emailHelp" className="form-text text-light fw-lighter fs-6">We'll never share your email with anyone else.</div>
           </div>
@@ -69,7 +69,7 @@ const LoginPage = () => {
             <label htmlFor="exampleInputPassword1" className="form-label fw-bold m-4">Password</label>
             <input type="password" className="form-control" id="exampleInputPassword1" {...register('password', {required: true})}/>
             {
-              errors.password && <p className='text-danger '>Password is required</p>
+              errors.password && <p className='text-light bg-danger rounded fs-6 p-2 m-2'>Password is required</p>
             }
           </div>
           <button type="submit" className="btn btn-primary" style={{width:'15em',height:'3em'}}>Login</button>
