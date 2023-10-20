@@ -107,7 +107,7 @@ export const deleteTaskRequest= async (id) =>{
         })
         const json=await res.json();
 
-        console.log(json)
+        //console.log(json)
         return {json};
 
 

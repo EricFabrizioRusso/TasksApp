@@ -57,7 +57,7 @@ export const AuthProvider =({children})=>{
         try{
 
             const res=await loginData(user);
-            console.log(res.json);
+            //console.log(res.json);
             if('errmessage' in res.json){
 
         
@@ -93,7 +93,7 @@ export const AuthProvider =({children})=>{
             const cookies= Cookies.get();
             let saveCookie= cookies.token
             const cookieFrontend= Cookies.set('newToken', saveCookie)
-            console.log(cookies.token,'Compruebo si existen cookies');
+            //console.log(cookies.token,'Compruebo si existen cookies');
             /*if(!cookies.token){
                 setIsAuthenticated(false);
                 setloading(false);
@@ -116,10 +116,16 @@ export const AuthProvider =({children})=>{
                 setloading(false);
                 console.log('token valido')*/
                 const res= await  verifyTokenRequest(cookieFrontend);
+                if(res.json.errmessage === 'Unauthorized, not token found' ){
+                    setIsAuthenticated(false);
+                    setloading(false);
+                    return
+                }
                 setIsAuthenticated(true);
                 setUser(res.json);
                 setloading(false);
-                console.log('token valido', cookieFrontend)
+                //console.log('token valido', cookieFrontend)
+                //console.log(res.json)
                 
             }catch(error){
 

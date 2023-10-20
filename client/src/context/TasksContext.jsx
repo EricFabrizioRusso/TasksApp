@@ -46,14 +46,14 @@ export const TaskProvider=({children})=>{
     const createTask=async(task)=>{
 
         const res= await createTaskRequest(task);
-        console.log(res);
+        //console.log(res);
         
 
     }
 
     const deleteTask=async(id)=>{
 
-        console.log(id)
+        //console.log(id)
         try{
             const res= await deleteTaskRequest(id);
             if(res.status !== 400 || 404){
@@ -75,7 +75,7 @@ export const TaskProvider=({children})=>{
         try{
 
             const res= await getTaskRequest(id);
-            console.log(res.json);
+            //console.log(res.json);
             return res.json
 
         }catch(error){
@@ -89,7 +89,7 @@ export const TaskProvider=({children})=>{
 
         try{
             const res= await updateTaskRequest(id,task)
-            console.log(res);
+            //console.log(res);
 
         }catch(error){
 

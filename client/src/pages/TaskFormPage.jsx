@@ -35,14 +35,14 @@ const TaskFormPage = () => {
 
   const onSubmit= handleSubmit((data)=>{
 
-    console.log(data, 'DATA')
+    //console.log(data, 'DATA')
 
     const dataValid ={
       ...data,
       date: data.date ? dayjs.utc(data.date).format() : dayjs.utc().format(),
 
     }
-    console.log(dataValid);
+    //console.log(dataValid);
 
     if(params.id){
 
